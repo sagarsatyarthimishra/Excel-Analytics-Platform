@@ -52,7 +52,7 @@ const Login = () => {
               Reset
             </button>
           </div>
-          <p className="text-base mt-1">Create new Account</p>
+          <p className="text-base mt-1" href='./Register.jsx'>Create new Account <span className="text-blue-500 cursor-pointer border-b-1 border-blue-500">Register here</span></p>
         </div>
       </form>
     </div>
