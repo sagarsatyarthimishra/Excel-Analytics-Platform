@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
   return (
     <div className="w-full h-screen flex items-center justify-center bg-gray-100">
       <form
@@ -48,11 +50,12 @@ const Login = () => {
             <button
               type="reset"
               className="text-blue-500 cursor-pointer border-b-1 border-blue-500"
+              onClick={()=>{navigate('/Forget')}} 
             >
-              Reset
+              Forget Password?
             </button>
           </div>
-          <p className="text-base mt-1" href='./Register.jsx'>Create new Account <span className="text-blue-500 cursor-pointer border-b-1 border-blue-500">Register here</span></p>
+          <p className="text-base mt-1" href='./Register.jsx'>Create new Account <span onClick={()=>{navigate('/Register')}} className="text-blue-500 cursor-pointer border-b-1 border-blue-500">Register here</span></p>
         </div>
       </form>
     </div>
